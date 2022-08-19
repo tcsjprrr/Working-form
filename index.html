@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Working-Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello...!</h1>
-    <h2>First Github Repository</h2>
-    <h3>testing....</h3>
-    <h3>css to be add</h3>
+    <div class="container">
+        <form onsubmit="reset(); return false;">
+            <h2>GET IN TOUCH</h2>
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <input type="tel" name="phone" id="phone" placeholder="Your Phone">
+            <input type="email" name="email" id="email" placeholder="Your email">
+            <textarea name="message" id="message" rows="3" placeholder="your message here"></textarea>
+            <button type="submit" onclick="sendMail()">Send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendMail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "tcsjprrr@gmail.com",
+                Password: "08CE07D600270E41D1762638737FCF470FBA",
+                To: 'tcsjprrr@gmail.com',
+                From: "tcsjprrr@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
 </body>
+
 </html>
