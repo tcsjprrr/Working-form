@@ -18,6 +18,7 @@ form{
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 form h2{
     margin: 1.5rem 1rem;
@@ -40,4 +41,5 @@ form button{
     font-weight: bold;
     font-size: 1rem;
     margin: 0.8rem auto 1rem;
+    border-radius: 130px;
 }
